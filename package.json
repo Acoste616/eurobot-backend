@@ -10,9 +10,9 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.25.23",
-    "@strapi/plugin-users-permissions": "4.25.23",
-    "@strapi/strapi": "4.25.23",
+    "@strapi/plugin-i18n": "5.30.0",
+    "@strapi/plugin-users-permissions": "5.30.0",
+    "@strapi/strapi": "5.30.0",
     "pg": "^8.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -20,13 +20,13 @@
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@types/node": "^22.10.5"
+    "@types/node": "^20.17.10"
   },
   "author": {
     "name": "Robohub"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
