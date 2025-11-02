@@ -4,9 +4,9 @@ services:
     env: node
     region: frankfurt
     plan: starter
-    buildCommand: npm ci && npm run build
+    buildCommand: npm install --no-audit --progress=false && npm run build
     startCommand: npm run start
-    healthCheckPath: /_health
+    healthCheckPath: /
     envVars:
       - key: NODE_VERSION
         value: 22.11.0
