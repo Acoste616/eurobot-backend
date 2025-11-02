@@ -2,6 +2,44 @@
 
 This is the Strapi v5 CMS backend for the EuroBot Hub project.
 
+## 🚀 Quick Deployment
+
+### Vercel Deployment (Recommended)
+
+1. **Install Vercel CLI**:
+```bash
+npm install -g vercel
+```
+
+2. **Login to Vercel**:
+```bash
+vercel login
+```
+
+3. **Deploy**:
+```bash
+cd strapi-backend
+vercel
+```
+
+4. **Set Environment Variables** (in Vercel Dashboard):
+   - `DATABASE_URL` - PostgreSQL connection string
+   - `APP_KEYS` - Random string (generate with: `openssl rand -base64 32`)
+   - `API_TOKEN_SALT` - Random string
+   - `ADMIN_JWT_SECRET` - Random string
+   - `TRANSFER_TOKEN_SALT` - Random string
+   - `JWT_SECRET` - Random string
+   - `NODE_ENV=production`
+
+5. **Deploy to production**:
+```bash
+vercel --prod
+```
+
+### Render Deployment
+
+The `render.yaml` file is pre-configured for automatic deployment.
+
 ## Prerequisites
 
 - Node.js 18+ or 20+
