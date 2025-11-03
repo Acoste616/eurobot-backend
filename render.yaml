@@ -1,7 +1,6 @@
 services:
   - type: web
     name: eurobot-hub-strapi
-    rootDir: strapi-backend
     env: node
     region: frankfurt
     plan: starter

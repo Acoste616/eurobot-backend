@@ -2,31 +2,29 @@
   "name": "eurobot-hub-strapi",
   "private": true,
   "version": "2.0.0",
-  "description": "Strapi v5 backend for EuroBot Hub",
+  "description": "Strapi v4 backend for EuroBot Hub",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "deploy:vercel": "vercel --prod"
+    "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "5.6.0",
-    "@strapi/plugin-users-permissions": "5.6.0",
-    "@strapi/strapi": "5.6.0",
+    "@strapi/plugin-i18n": "4.25.23",
+    "@strapi/plugin-users-permissions": "4.25.23",
+    "@strapi/strapi": "4.26.0",
     "better-sqlite3": "11.5.0",
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "@strapi/typescript-utils": "5.6.0",
     "@types/node": "^20.11.0"
   },
   "author": {
     "name": "Robohub"
   },
   "engines": {
-    "node": ">=20.0.0 <21.0.0",
-    "npm": ">=10.0.0"
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
