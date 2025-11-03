@@ -1,12 +1,17 @@
 services:
   - type: web
     name: eurobot-hub-strapi
+    rootDir: strapi-backend
     env: node
     region: frankfurt
     plan: starter
     buildCommand: npm install --no-audit --progress=false && npm run build
     startCommand: npm run start
     healthCheckPath: /
+    disk:
+      name: strapi-uploads
+      mountPath: /opt/render/project/src/public/uploads
+      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: 22.11.0
