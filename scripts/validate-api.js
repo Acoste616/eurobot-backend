@@ -16,6 +16,7 @@ const path = require('path');
 // Configuration
 const API_DIR = path.join(__dirname, '..', 'src', 'api');
 const REQUIRED_FILE_TYPES = ['routes', 'controllers', 'services', 'content-types'];
+const CUSTOM_ENDPOINTS = ['health']; // Endpoints that don't need full collection type structure
 
 // ANSI color codes for terminal output
 const colors = {
@@ -63,8 +64,18 @@ function validateApiStructure() {
     const typeDir = path.join(API_DIR, type);
     const errors = [];
 
+    // Check if this is a custom endpoint (only needs routes and controllers)
+    const isCustomEndpoint = CUSTOM_ENDPOINTS.includes(type);
+    const requiredDirs = isCustomEndpoint 
+      ? ['routes', 'controllers'] 
+      : REQUIRED_FILE_TYPES;
+
+    if (isCustomEndpoint) {
+      log('  ℹ️  Custom endpoint (health check, utility, etc.)', 'blue');
+    }
+
     // Check required directories
-    REQUIRED_FILE_TYPES.forEach(fileType => {
+    requiredDirs.forEach(fileType => {
       const dirPath = path.join(typeDir, fileType);
       
       if (!fs.existsSync(dirPath)) {

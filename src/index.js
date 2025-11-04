@@ -5,24 +5,8 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register({ strapi }) {
-    // Add custom health check route
-    strapi.server.routes([
-      {
-        method: 'GET',
-        path: '/_health',
-        handler: (ctx) => {
-          ctx.body = {
-            status: 'ok',
-            timestamp: new Date().toISOString(),
-            uptime: process.uptime(),
-          };
-        },
-        config: {
-          auth: false,
-        },
-      },
-    ]);
+  register(/* { strapi } */) {
+    // Registration logic can be added here if needed
   },
 
   /**
