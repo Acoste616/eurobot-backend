@@ -2,7 +2,7 @@
   "name": "eurobot-hub-strapi",
   "private": true,
   "version": "2.0.0",
-  "description": "Strapi v5 backend for EuroBot Hub",
+  "description": "Strapi backend for EuroBot Hub",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -19,9 +19,9 @@
     "seed": "npm run seed:production"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "5.0.1",
-    "@strapi/plugin-users-permissions": "5.0.1",
-    "@strapi/strapi": "5.0.1",
+    "@strapi/plugin-i18n": "4.25.23",
+    "@strapi/plugin-users-permissions": "4.25.23",
+    "@strapi/strapi": "4.25.23",
     "better-sqlite3": "11.5.0",
     "pg": "^8.13.1",
     "react": "^18.3.1",
