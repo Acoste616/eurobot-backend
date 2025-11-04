@@ -59,9 +59,6 @@
       "enum": ["Case Studies", "ROI Analysis", "Use Cases", "Technology"],
       "default": "Technology"
     },
-    "publishedAt": {
-      "type": "datetime"
-    },
     "is_expert_report": {
       "type": "boolean",
       "default": false

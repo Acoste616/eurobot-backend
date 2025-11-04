@@ -6,7 +6,7 @@ services:
     plan: starter
     buildCommand: NODE_ENV=production npm install --no-audit --progress=false && NODE_ENV=production npm run build
     startCommand: npm run start
-    healthCheckPath: /
+    healthCheckPath: /_health
     disk:
       name: strapi-uploads
       mountPath: /opt/render/project/src/public/uploads
